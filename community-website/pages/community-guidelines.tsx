@@ -13,6 +13,7 @@ const CommunityGuidelines: NextPage = () => {
     const confetti = new ConfettiGenerator(confettiSettings);
     confetti.render();
 
+     // Ensure confetti is cleared on component unmount
     return () => confetti.clear();
   }, []);
 
@@ -32,7 +33,7 @@ const CommunityGuidelines: NextPage = () => {
       <main
         className={`${styles.communityGuidelines} text-black dark:text-white`}
       >
-        <NavBar></NavBar>
+        <NavBar />
 
         <h1 className={styles.title}>
           <a
@@ -45,7 +46,7 @@ const CommunityGuidelines: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          <Link href="/">{"< Go Back"}</Link>
+          <Link href="/">&lt; Go Back</Link>
         </p>
 
         <div>
@@ -97,7 +98,7 @@ const CommunityGuidelines: NextPage = () => {
               <p>
                 We are a very diverse community. Thus, it would help if you
                 acted professionally. Therefore, you are to work in a manner
-                that includes but is not restricted to:
+                that includes but is not restricted to:
               </p>
               <ul>
                 <li>
